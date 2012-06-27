@@ -21,7 +21,7 @@ public class Main {
      * 3. Invoke main method. All scripts will be created in the root of project
      * with a corresponding names
      * 4. Copy-past it into you grovvy scripts.
-     * 4. Enjoy.
+     * 5. Enjoy.
      *
      * @param args command line arguments.
      * @throws Exception if any.
