@@ -168,7 +168,7 @@ public class ScriptCreator {
             writer.newLine();
         }
         writer.newLine();
-        writer.write("Количество:" + filePathScript.size());
+        writer.write("Number of records:" + filePathScript.size());
         writer.close();
         System.out.println("Creating file path script done.");
     }
@@ -208,7 +208,7 @@ public class ScriptCreator {
             writer.newLine();
         }
         writer.newLine();
-        writer.write("Количество:" + docPathScript.size());
+        writer.write("Number of records:" + docPathScript.size());
         writer.close();
         System.out.println("Creating doc path script done.");
     }
@@ -251,7 +251,7 @@ public class ScriptCreator {
             writer.newLine();
         }
         writer.newLine();
-        writer.write("Количество:" + mapperScript.size());
+        writer.write("Number of records:" + mapperScript.size());
         writer.close();
         System.out.println("Creating file document script done.");
     }
@@ -290,7 +290,7 @@ public class ScriptCreator {
             writer.newLine();
         }
         writer.newLine();
-        writer.write("Количество:" + mapperScript.size());
+        writer.write("Number of records:" + mapperScript.size());
         writer.close();
         System.out.println("Creating loader mapper script done.");
     }
