@@ -1,0 +1,17 @@
+apply plugin: 'java'
+sourceCompatibility = 1.7
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile('postgresql:postgresql:9.1-901.jdbc4')
+}
+
+jar {
+ manifest {
+  attributes("Main-Class":"com.copyright.rup.parser.onix.OnixParser", "Implementation-Title": "Gradle")
+ }
+}

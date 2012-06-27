@@ -1,11 +1,11 @@
-package com.epam.script.service;
+package com.epam.creator.service;
 
-import com.epam.script.domain.DocPathRecord;
-import com.epam.script.domain.FilePathRecord;
-import com.epam.script.domain.WorkFileDocumentRecord;
-import com.epam.script.template.IWorkItemTemplate;
-import com.epam.script.template.IWorkTemplate;
-import com.epam.script.template.MappingHelper;
+import com.epam.creator.domain.DocPathRecord;
+import com.epam.creator.domain.FilePathRecord;
+import com.epam.creator.domain.WorkFileDocumentRecord;
+import com.epam.creator.template.IWorkItemTemplate;
+import com.epam.creator.template.IWorkTemplate;
+import com.epam.creator.template.MappingHelper;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -27,7 +27,7 @@ import java.util.Map;
  *
  * @author Uladzimir Zburzhynski
  */
-public class ScriptCreator {
+public class ScriptCreatorService {
 
     /**
      * Url for connecting to database.
@@ -42,7 +42,7 @@ public class ScriptCreator {
     /**
      * Password for connecting to database.
      */
-    private static final String PASSWORD = "***";
+    private static final String PASSWORD = "Voffka@1987";
 
     /**
      * Loader uid for creating loader_mapper.groovy script.
@@ -79,7 +79,7 @@ public class ScriptCreator {
      *
      * @throws Exception if any.
      */
-    public ScriptCreator() throws Exception {
+    public ScriptCreatorService() throws Exception {
         Class.forName("org.postgresql.Driver");
         connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
     }
@@ -139,7 +139,7 @@ public class ScriptCreator {
      * @throws Exception if any.
      */
     public void createFilePathScript() throws Exception {
-        writer = new BufferedWriter(new FileWriter("file_path_script.txt"));
+        writer = new BufferedWriter(new FileWriter("build/file_path_script.txt"));
         for (FilePathRecord record : filePathScript) {
             writer.write("insert(tableName: 'file_path') {");
             writer.newLine();
@@ -179,7 +179,7 @@ public class ScriptCreator {
      * @throws Exception if any.
      */
     public void createDocPathScript() throws Exception {
-        writer = new BufferedWriter(new FileWriter("doc_path_script.txt"));
+        writer = new BufferedWriter(new FileWriter("build/doc_path_script.txt"));
         for (DocPathRecord record : docPathScript) {
             writer.write("insert(tableName: 'doc_path') {");
             writer.newLine();
@@ -219,7 +219,7 @@ public class ScriptCreator {
      * @throws Exception if any.
      */
     public void createMapperScript() throws Exception {
-        writer = new BufferedWriter(new FileWriter("mapper_script.txt"));
+        writer = new BufferedWriter(new FileWriter("build/mapper_script.txt"));
         for (WorkFileDocumentRecord record : mapperScript) {
             writer.write("insert(tableName: 'mapper') {");
             writer.newLine();
@@ -262,7 +262,7 @@ public class ScriptCreator {
      * @throws Exception if any.
      */
     public void createLoaderMapperScript() throws Exception {
-        writer = new BufferedWriter(new FileWriter("loader_mapper_script.txt"));
+        writer = new BufferedWriter(new FileWriter("build/loader_mapper_script.txt"));
         for (WorkFileDocumentRecord record : mapperScript) {
             writer.write("insert(tableName: 'loader_mapper') {");
             writer.newLine();

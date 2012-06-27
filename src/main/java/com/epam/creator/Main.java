@@ -1,6 +1,6 @@
-package com.epam.script;
+package com.epam.creator;
 
-import com.epam.script.service.ScriptCreator;
+import com.epam.creator.service.ScriptCreatorService;
 
 /**
  * Main class for launching application.
@@ -27,7 +27,7 @@ public class Main {
      * @throws Exception if any.
      */
     public static void main(String[] args) throws Exception {
-        ScriptCreator creator = new ScriptCreator();
+        ScriptCreatorService creator = new ScriptCreatorService();
         creator.createScripts();
     }
 

@@ -1,4 +1,4 @@
-package com.epam.script.template;
+package com.epam.creator.template;
 
 /**
  * Helper class for creating mappings for different formats.

@@ -1,4 +1,4 @@
-package com.epam.script.domain;
+package com.epam.creator.domain;
 
 import java.util.UUID;
 

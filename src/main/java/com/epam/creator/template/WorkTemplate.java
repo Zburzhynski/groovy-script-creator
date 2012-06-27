@@ -1,4 +1,4 @@
-package com.epam.script.template;
+package com.epam.creator.template;
 
 import java.util.ArrayList;
 import java.util.HashMap;

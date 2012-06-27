@@ -1,4 +1,4 @@
-package com.epam.script.template;
+package com.epam.creator.template;
 
 /**
  * Implementation {@link IWorkItemTemplate} interface.
