@@ -14,6 +14,11 @@ import java.util.UUID;
 public class WorkFileDocumentRecord extends BaseRecord {
 
     /**
+     * Format uid (now now it's not used).
+     */
+    private static final String FORMAT_UID = "2a3c519a-a09f-4df2-b9fa-b9458a77e456";
+
+    /**
      * Work file document uid.
      */
     private String workFileDocumentUID;
@@ -49,7 +54,7 @@ public class WorkFileDocumentRecord extends BaseRecord {
     public WorkFileDocumentRecord() {
         super();
         workFileDocumentUID = UUID.randomUUID().toString();
-        formatUID = "2a3c519a-a09f-4df2-b9fa-b9458a77e456";
+        formatUID = FORMAT_UID;
     }
 
     /**
