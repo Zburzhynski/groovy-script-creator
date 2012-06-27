@@ -11,7 +11,7 @@ import com.epam.creator.service.ScriptCreatorService;
  *
  * @author Uladzimir Zburzhynski
  */
-public class Main {
+public class ScriptCreator {
 
     /**
      * For creating groovy scripts you must perform the following steps:

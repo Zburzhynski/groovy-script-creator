@@ -42,7 +42,7 @@ public class ScriptCreatorService {
     /**
      * Password for connecting to database.
      */
-    private static final String PASSWORD = "Voffka@1987";
+    private static final String PASSWORD = "***";
 
     /**
      * Loader uid for creating loader_mapper.groovy script.
