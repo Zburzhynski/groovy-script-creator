@@ -226,4 +226,57 @@ public final class MappingHelper {
             STRING_TYPE, true);
         return workTemplate;
     }
+
+    /**
+     * Builds the custom CrossRef template for using in CrossRef parsers. This template uses for
+     * creating valid object for processing phase.
+     * 
+     * @return The work template.
+     */
+    public static IWorkTemplate buildCustomCrossrefTemplate() {
+        IWorkTemplate workTemplate = new WorkTemplate();
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.titles.title", "work.workTitle.title",
+            WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.titles.TitleType",
+            "work.workTitle.typeCd", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.publisher.publisher_place",
+            "work.publicationCountry", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.publisher.publisher_name",
+            "work.publisher.name", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.publisher.publisher_role",
+            "work.publisher.roleInst", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.publication_date.year",
+            "work.workDates.pubStartDate", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.content_item.pages.first_page",
+            "work.itemAttributes.startPage", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate("record.metadata.crossref.book.book_metadata.volume",
+            "work.itemAttributes.volume", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.content_item.pages.page_range",
+            "work.itemAttributes.pageRange", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate("record.metadata.crossref.book.content_item.issue",
+            "work.itemAttributes.issue", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.doi_data.doi", "work.idno.idno",
+            WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.doi_data.type", "work.idno.typeCd",
+            WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.source_primary_key",
+            "work.sourcePrimaryKey", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate("record.metadata.crossref.book.book_metadata.split_inst",
+            "work.splitInst", WorkItemType.STRING, true);
+        workTemplate.addWorkItemTemplate(
+            "record.metadata.crossref.book.book_metadata.contributors.person_name.surname",
+            "work.normedContributor", WorkItemType.STRING, true);
+        return workTemplate;
+    }
 }
